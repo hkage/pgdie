@@ -3,12 +3,26 @@
 import click
 
 @click.command()
-def main(args=None):
-    """Console script for pgdie"""
-    click.echo("Replace this message by putting your code into "
-                "pgdie.cli.main")
-    click.echo("See click documentation at http://click.pocoo.org/")
+def config():
+    pass
+
+
+@click.command()
+@click.argument('command', required=False)
+@click.pass_context
+def help(ctx, command):
+    pass
+
+
+@click.command()
+def dump():
+    pass
+
+
+@click.command()
+def load():
+    pass
 
 
 if __name__ == "__main__":
-    main()
+    help()
